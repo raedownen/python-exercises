@@ -14,8 +14,7 @@ if day_of_week == ('Monday' or 'Tuesday' or 'Wednesday' or 'Thursday' or 'Friday
 else:
     print("It is definitely the weekend!")
 
-#c. create variables and make up values for
-
+#c. create variables and make up values forgit 
 #the number of hours worked in one week
 #the hourly rate
 #how much the week's paycheck will be
@@ -61,38 +60,63 @@ while countdown > 4:
 #b. For Loops
 
     i. Write some code that prompts the user for a number, then shows a multiplication table up through 10 for that number.
+num = int(input("Display multiplication table of? "))
 
-For example, if the user enters 7, your program should output:
+for i in range(1, 11):
+   print(num, 'x', i, '=', num*i)
 
 
     ii. Create a for loop that uses print to create the output shown below.
 
 
-c. break and continue
+#c. break and continue
 
-    i. Write a program that prompts the user for a positive integer. Next write a loop that prints out the numbers from the number the user entered down to 1.
+    #i. Write a program that prompts the user for a positive integer. Next write a loop that prints out the numbers from the number the user entered down to 1.
+n = int(input("Enter a positive integer: "))
+while n > 1:
+    n -= 1
+    print(n)
+print('Loop ended.')
 
-    ii. The input function can be used to prompt for input and use that input in your python code. Prompt the user to enter a positive number and write a loop that counts from 0 to that number. (Hints: first make sure that the value the user entered is a valid number, also note that the input function returns a string, so you'll need to convert this to a numeric type.)
+#ii. The input function can be used to prompt for input and use that input in your python code. Prompt the user to enter a positive number 
+# and write a loop that counts from 0 to that number. (Hints: first make sure that the value the user entered is a valid number, 
+# also note that the input function returns a string, so you'll need to convert this to a numeric type.)
+num = eval(input('Enter a number: '))
+i = 1
+while i > 0 :
+  print(i)
+  if i == num:
+    break
+  i += 1
 
-    iii. Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
+#iii. Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input. 
+# (Hint: use the isdigit method on strings to determine this). Use a loop and the continue statement to output all the odd numbers between 1 and 50, 
+# except for the number the user entered.
 
 
-3. Fizzbuzz
+#3. Fizzbuzz
+#One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, 
+# the test is designed to test basic looping and conditional logic skills.
+#Write a program that prints the numbers from 1 to 100.
+#For multiples of three print "Fizz" instead of the number
+#For the multiples of five print "Buzz".
+#For numbers which are multiples of both three and five print "FizzBuzz".
+for i in range(1, 101):
+    if i%3 == 0 and i%5 ==0:
+        print("FizzBuzz")
+    elif i%3 == 0:
+        print('Fizz')
+    elif i%5 == 0:
+        print("Buzz")
+    print(i)
 
-One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to test basic looping and conditional logic skills.
 
-    Write a program that prints the numbers from 1 to 100.
-    For multiples of three print "Fizz" instead of the number
-    For the multiples of five print "Buzz".
-    For numbers which are multiples of both three and five print "FizzBuzz".
-
-4. Display a table of powers.
-
-    Prompt the user to enter an integer.
-    Display a table of squares and cubes from 1 to the value entered.
-    Ask if the user wants to continue.
-    Assume that the user will enter valid data.
-    Only continue if the user agrees to.
+#4. Display a table of powers.
+#Prompt the user to enter an integer.
+# Display a table of squares and cubes from 1 to the value entered.
+# Ask if the user wants to continue.
+# Assume that the user will enter valid data.
+# Only continue if the user agrees to.
 
 
 5. Convert given number grades into letter grades.
